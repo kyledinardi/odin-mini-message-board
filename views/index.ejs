@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/new">Create a new message</a>
+    <ul>
+      <% messages.map((message) => {%>
+      <li>
+        <h2><%= message.user %></h2>
+        <h3><%= message.text %></h3>
+        <p><%= message.added %></p>
+        <button><a href="/messages/<%= message.id %>">Open</a></button>
+      </li>
+      <%}) %>
+    </ul>
+  </body>
+</html>

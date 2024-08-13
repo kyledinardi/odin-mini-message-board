@@ -1,9 +1,0 @@
-extends layout
-
-block content
-  h1= title
-  form(method='POST' action='/new')
-    label(for="user") User: 
-    input(type="text", name="user")
-    textarea(name="messageText", cols="30", rows="10") 
-    button(type="submit") Submit
